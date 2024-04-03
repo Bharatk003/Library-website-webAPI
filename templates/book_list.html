@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book list</title>
+</head>
+<body>
+    {% block content %}
+        <h1>All Books</h1>
+        {% for book in object_list %}
+        <li> 
+            <ul><h2>{{book.title}}</h2></ul>
+            <ul><h4>{{book.subtitle}}</h4></ul>
+            <ul>{{book.author}}</ul>
+            <ul>{{book.isbn}}</ul>
+        </li>
+        {% endfor %}
+    {% endblock content %}
+</body>
+</html>
